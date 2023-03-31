@@ -6,20 +6,20 @@ int searchnumber(int num);
 int main() {
     int num;
     
-    printf("Ã£À¸·Á´Â °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä, ");
+    printf("ì°¾ìœ¼ë ¤ëŠ” ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”, ");
     scanf("%d", &num);
 
-    searchnumber(num);
+    searchnumber(num); // í•¨ìˆ˜ í˜¸ì¶œ
 
 }
 
-int searchnumber(int num)
+int searchnumber(int num) // ì„ì˜ì˜ ìˆ«ì ì°¾ê¸° í•¨ìˆ˜
 {
     int array[] = { 13, 24, 55, 2, 95, 10, 67, 20 };
 
-    for (int i = 0; i < 10; i++) { // ¹è¿­ ¼øÈ¸, °Ë»ö
+    for (int i = 0; i < 10; i++) { // ë°°ì—´ ìˆœíšŒ, ê²€ìƒ‰
         if (array[i] == num) {
-            printf("%d´Â %d¹øÂ°¿¡ ÀÖ½À´Ï´Ù.",num, i + 1); // 3¹øÂ° À§Ä¡ Ãâ·Â
+            printf("%dëŠ” %dë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤.",num, i + 1); // ì…ë ¥ë°›ì€ ìˆ«ìì˜ ì¸ë±ìŠ¤ ê°’ì„ ì¶œë ¥
         }
     }
 }
