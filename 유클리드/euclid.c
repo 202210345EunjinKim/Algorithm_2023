@@ -8,10 +8,10 @@ int Euclid(int a, int b) {
 		a = b;
 		b = num % b;
 	} return a;
-} // ¹İº¹Àû
+} // ë°˜ë³µì 
 int Euclid2(int a, int b) {
 	if (b == 0)
 		return a;
 
 	return Euclid2(b, a % b);
-} // Àç±ÍÀû
+} // ì¬ê·€ì 
