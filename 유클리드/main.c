@@ -7,32 +7,32 @@ int Euclid(int a, int b);
 int Euclid2(int a, int b);
 
 int main() {
-	time_t start, end;
-	double result; // ½Ã°£ ÃøÁ¤ º¯¼ö ¼±¾ğ
+	clock_t start, end;
+	double result; // ì‹œê°„ ì¸¡ì • ë³€ìˆ˜ ì„ ì–¸
 	int num1, num2;
 	int test1, test2;
 
-	printf("µÎ ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+	printf("ë‘ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 	scanf("%d %d", &num1, &num2);
 
-	printf("ÃÖ´ë°ø¾à¼ö´Â %dÀÔ´Ï´Ù. (¹İº¹Àû)\n", Euclid(num1, num2));
-	printf("ÃÖ´ë°ø¾à¼ö´Â %dÀÔ´Ï´Ù. (Àç±ÍÀû)\n\n", Euclid2(num1, num2)); // ÀÔ·Â¹ŞÀº µÎ ¼ö¸¦ °¢°¢ Àç±ÍÀû, ¹İº¹Àû ÇÔ¼ö·Î °á°ú Ãâ·Â
+	printf("ìµœëŒ€ê³µì•½ìˆ˜ëŠ” %dì…ë‹ˆë‹¤. (ë°˜ë³µì )\n", Euclid(num1, num2));
+	printf("ìµœëŒ€ê³µì•½ìˆ˜ëŠ” %dì…ë‹ˆë‹¤. (ì¬ê·€ì )\n\n", Euclid2(num1, num2)); // ì…ë ¥ë°›ì€ ë‘ ìˆ˜ë¥¼ ê°ê° ì¬ê·€ì , ë°˜ë³µì  í•¨ìˆ˜ë¡œ ê²°ê³¼ ì¶œë ¥
 
-	start = time(NULL); // ¼öÇà ½Ã°£ ÃøÁ¤ ½ÃÀÛ
+	start = clock(); // ìˆ˜í–‰ ì‹œê°„ ì¸¡ì • ì‹œì‘
 
 	srand((unsigned)time(NULL));
 
 	test1 = rand() % (5000-1000+1)+1000;			
-	test2 = rand() % (5000 - 1000 + 1) + 1000;			// ³­¼ö »ı¼º ¹üÀ§¸¦ 1000~5000À¸·Î ¼³Á¤
+	test2 = rand() % (5000 - 1000 + 1) + 1000;			// ë‚œìˆ˜ ìƒì„± ë²”ìœ„ë¥¼ 1000~5000ìœ¼ë¡œ ì„¤ì •
 
 	printf("test 1= %d\n", test1);
-	printf("test 2= %d\n", test2); // µÎ ³­¼ö¸¦ Ãâ·Â 
-	printf("ÃÖ´ë°ø¾à¼ö´Â %dÀÔ´Ï´Ù. (¹İº¹Àû)\n", Euclid(test1, test2));
-	printf("ÃÖ´ë°ø¾à¼ö´Â %dÀÔ´Ï´Ù. (Àç±ÍÀû)\n\n", Euclid2(test1, test2));
+	printf("test 2= %d\n", test2); // ë‘ ë‚œìˆ˜ë¥¼ ì¶œë ¥ 
+	printf("ìµœëŒ€ê³µì•½ìˆ˜ëŠ” %dì…ë‹ˆë‹¤. (ë°˜ë³µì )\n", Euclid(test1, test2));
+	printf("ìµœëŒ€ê³µì•½ìˆ˜ëŠ” %dì…ë‹ˆë‹¤. (ì¬ê·€ì )\n\n", Euclid2(test1, test2));
 
-	end = time(NULL); // ¼öÇà ½Ã°£ ÃøÁ¤ Á¾·á
-	result = (double)(end - start); // ½Ã°£ °á°ú ÀúÀå
+	end = clock(); // ìˆ˜í–‰ ì‹œê°„ ì¸¡ì • ì¢…ë£Œ
+	result = (double)(end - start); // ì‹œê°„ ê²°ê³¼ ì €ì¥
 
-	printf("ÀÌ ÄÚµåÀÇ ¼öÇà °á°ú´Â %fÃÊÀÔ´Ï´Ù.", result); // ¼öÇà ½Ã°£ Ãâ·Â
+	printf("ì´ ì½”ë“œì˜ ìˆ˜í–‰ ê²°ê³¼ëŠ” %fì´ˆì…ë‹ˆë‹¤.", result); // ìˆ˜í–‰ ì‹œê°„ ì¶œë ¥
 	
 }
